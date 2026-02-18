@@ -17,8 +17,8 @@ Description: Package for processing mass spectrometry-based metabolomics files.
 	     package can process standard compounds analysis files for internal library
 	     development.
 License: GPL (>= 3)
-BugReports: https://github.com/AnnafCouto/PipMet/issues
-URL: https://github.com/AnnafCouto/PipMet
+BugReports: https://github.com/PipMet/PipMet/issues
+URL: https://github.com/PipMet/PipMet
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
