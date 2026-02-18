@@ -1,0 +1,70 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# PipMet
+
+<!-- badges: start -->
+
+The PipMet package was developed to process begin-to-end metabolomic-based GC-MS data, with the automatized generation of pictures throughout the processing in high quality. Every input from the user is taken through pop-up windows.This package was first developed for the Brazilian National Biorenewables Laboratory (LNBR) from the Brazilian National Center for Research in Energy and Materials (CNPEM).
+
+<!-- badges: end -->
+
+## Installation
+
+You can install the released version of PipMet from [GitHub](https://github.com) with:
+
+``` {r, eval = FALSE}
+devtools::install_github("AnnafCouto/PipMet")
+```
+
+The user may also install the package through Bioconductor repository:
+
+``` {r, eval = FALSE}
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("PipMet")
+``` 
+
+## Example
+
+The package is constituted of two main functions with pre-set parameters and algorithms for GC-MS data processing. The `workData()` function reads, treats and process GC-MS sample data, with metabolite identification and quantification. The second one, `workLib()` provides a workflow for an internal library creation to be uploaded into NIST MS Search software for spectra annotation.
+
+The package was thought to be the more friendly-user as possible, even though it runs in code lines. Therefore, when information is needed, pop-ups will appear so that the user can input them.
+
+``` {r, eval=FALSE}
+result <- workData(
+   sample_dir = system.file("extdata", package = "PipMet"),
+   metadata = system.file("extdata", "metadata.csv", package = "PipMet"),
+   extension = ".mzXML",
+   myDir = '~/',
+   example = TRUE,
+   pictures = TRUE
+)
+```
+
+
+``` {r, eval=FALSE}
+library(PipMet)
+workLib(
+   extension = ".mzML",
+   myDir = '~/',
+   example = TRUE,
+)
+```
+
+Set 'pictures = TRUE' to generate pictures along the code.
+
+For more information, see the package [vignette](vignettes/workData.Rmd).

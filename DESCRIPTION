@@ -3,11 +3,10 @@ Title: Pipeline for Metabolomics-based GC-MS Data Processing
 Version: 1.0.0
 Authors@R: 
     c(
-        person("Tatiani", "Lima", email = "tatiani.brenelli@gmail.com", role = c("aut", "cre"),
-               comment = c(ORCID = "0000-0003-4869-0592"))
-        person("Anna", "Couto", role = "aut",
+        person("Anna", "Couto", email = "annaa.freitas@gmail.com", role = c("aut", "cre"),
                comment = c(ORCID = "0009-0006-6216-7035")),
-        person("Juliana", "Aricetti", role = "aut",
+        person("Tatiani", "Lima", email = "tatianibl.gmail", role = "aut",
+               comment = c(ORCID = "0000-0003-4869-0592"))
     )
 Description: Package for processing mass spectrometry-based metabolomics files. 
 	     The accepted file formats are '.mzXML' and '.mzML'. The processing steps 
