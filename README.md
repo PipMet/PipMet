@@ -23,20 +23,22 @@ The following code will automatically check for and install all
 necessary **Bioconductor** and **CRAN** packages:
 
 ```r
-# Install BiocManager if necessary
-if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
+# 1. Install BiocManager and align with Bioconductor 3.22 (Required for R 4.5)
+if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+BiocManager::install(version = "3.22", ask = FALSE, update = TRUE)
 
-# Install Bioconductor dependencies
-BiocManager::install(c(
-  "xcms", "MSnbase", "CluMSID", "metaMS", "BiocParallel",
-  "Biobase", "ProtGenerics", "CAMERA", "NormalyzerDE"
-), ask = FALSE, update = TRUE)
+# 2. Install Devtools
+if (!requireNamespace("devtools", quietly = TRUE)) install.packages("devtools")
 
-# Install CRAN dependencies
+# 3. Install Bioconductor specific dependencies
+bioc_pkgs <- c("xcms", "MSnbase", "CluMSID", "metaMS", "BiocParallel", 
+               "Biobase", "ProtGenerics", "CAMERA", "NormalyzerDE")
+BiocManager::install(bioc_pkgs, ask = FALSE, update = TRUE)
+
+# 4. Install CRAN dependencies
 cran_pkgs <- c("svDialogs", "pheatmap", "ddpcr", "webchem", "fritools", "pracma")
-installed <- cran_pkgs %in% rownames(installed.packages())
-if (any(!installed)) install.packages(cran_pkgs[!installed])
+new_pkgs <- cran_pkgs[!(cran_pkgs %in% installed.packages()[,"Package"])]
+if(length(new_pkgs)) install.packages(new_pkgs)
 
 ```
 ### PipMet installation
@@ -45,16 +47,7 @@ You can install the released version of PipMet from
 [GitHub](https://github.com) with:
 
 ``` r {eval=FALSE}
-devtools::install_github("AnnafCouto/PipMet")
-```
-
-The user may also install the package through Bioconductor repository:
-
-``` r {eval=FALSE}
-if (!require("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-
-BiocManager::install("PipMet")
+devtools::install_github("AnnafCouto/PipMet", force = TRUE)
 ```
 
 ## Example
