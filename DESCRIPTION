@@ -1,0 +1,70 @@
+Package: PipMet
+Title: Pipeline for Metabolomics-based GC-MS Data Processing
+Version: 1.0.0
+Authors@R: 
+    c(
+        person("Anna", "Couto", email = "annaa.freitas@gmail.com", role = c("aut", "cre"),
+               comment = c(ORCID = "0009-0006-6216-7035")),
+        person("Tatiani", "Lima", email = "tatianibl.gmail", role = "aut",
+               comment = c(ORCID = "0000-0003-4869-0592"))
+    )
+Description: Package for processing mass spectrometry-based metabolomics files. 
+	     The accepted file formats are '.mzXML' and '.mzML'. The processing steps 
+	     combine deconvolute functions, spectra annotation, quantification and 
+	     basic statistics functions, with automatically generated images for 
+	     performance evaluation and result interpretation. Additionally, the 
+	     package can process standard compounds analysis files for internal library
+	     development.
+License: GPL (>= 3)
+BugReports: https://github.com/AnnafCouto/PipMet/issues
+URL: https://github.com/AnnafCouto/PipMet
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Imports: 
+    xcms,
+    MSnbase,
+    CluMSID,
+    metaMS,
+    ggplot2,
+    BiocParallel,
+    svDialogs,
+    tcltk,
+    RColorBrewer,
+    tools,
+    pheatmap,
+    ddpcr,
+    CAMERA,
+    NormalyzerDE,
+    gridExtra,
+    methods,
+    ggrepel,
+    stats,
+    Biobase,
+    utils,
+    grDevices,
+    graphics,
+    webchem,
+    ProtGenerics,
+    fritools,
+    stringr,
+    pracma,
+    parallel
+Depends: R (>= 4.2.0)
+biocViews: Metabolomics, MassSpectrometry, DataProcessing
+VignetteBuilder: knitr
+Suggests: knitr, rmarkdown, testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Remotes:
+    bioc::xcms,
+    bioc::MSnbase,
+    bioc::CluMSID,
+    bioc::metaMS,
+    bioc::CAMERA,
+    bioc::NormalyzerDE,
+    bioc::BiocParallel,
+    bioc::ProtGenerics,
+    bioc::Biobase,
+    github::jkirenz/fritools,
+    r-universe::ddpcr,
+    r-universe::webchem
