@@ -47,7 +47,7 @@ You can install the released version of PipMet from
 [GitHub](https://github.com) with:
 
 ``` r {eval=FALSE}
-devtools::install_github("AnnafCouto/PipMet", force = TRUE)
+remotes::install_github("PipMet/PipMet", force = TRUE)
 ```
 
 ## Example
@@ -64,23 +64,12 @@ pop-ups will appear to collect input.
 
 ``` r {eval=FALSE}
 library(PipMet)
-result <- workData(
-   sample_dir = system.file("extdata", package = "PipMet"),
-   metadata = system.file("extdata", "metadata.csv", package = "PipMet"),
-   extension = ".mzXML",
-   myDir = '~/',
-   example = TRUE,
-   pictures = TRUE
-)
+result <- workData()
 ```
 
 ``` r
 library(PipMet)
-workLib(
-   extension = ".mzML",
-   myDir = '~/',
-   example = TRUE,
-)
+workLib()
 ```
 
 Set ‘pictures = TRUE’ to generate pictures throughout the code.
