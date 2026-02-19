@@ -67,6 +67,4 @@ Remotes:
     bioc::BiocParallel,
     bioc::ProtGenerics,
     bioc::Biobase,
-    github::jkirenz/fritools,
-    r-universe::ddpcr,
-    r-universe::webchem
+    github::jkirenz/fritools
