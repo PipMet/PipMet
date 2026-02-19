@@ -49,7 +49,7 @@ Imports:
     stringr,
     pracma,
     parallel
-Depends: R (>= 4.2.0)
+Depends: R (>= 4.4.0)
 biocViews: Metabolomics, MassSpectrometry, DataProcessing
 VignetteBuilder: knitr
 Suggests: 
@@ -57,14 +57,3 @@ Suggests:
     rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
-Remotes: 
-    bioc::xcms,
-    bioc::MSnbase,
-    bioc::CluMSID,
-    bioc::metaMS,
-    bioc::CAMERA,
-    bioc::NormalyzerDE,
-    bioc::BiocParallel,
-    bioc::ProtGenerics,
-    bioc::Biobase,
-    github::jkirenz/fritools
