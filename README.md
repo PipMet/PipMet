@@ -60,13 +60,19 @@ identification and quantification.
 The package was thought to be as friendly-user as possible. Therefore, when information is needed,
 pop-ups will appear to collect input.
 
+To run an example use
+
+``` r {eval=FALSE}
+library(PipMet)
+result <- workData(example = TRUE)
+```
+
+To process your dataset use
+
 ``` r {eval=FALSE}
 library(PipMet)
 result <- workData()
 ```
-
-
-Set ‘pictures = TRUE’ to generate pictures throughout the code.
 
 For more information, see the manual
 [vignette](vignettes/workData.Rmd).
