@@ -74,5 +74,4 @@ library(PipMet)
 result <- workData()
 ```
 
-For more information, see the manual
-[vignette](vignettes/workData.Rmd).
+For more information, see the manual: https://github.com/PipMet/PipMet/blob/main/Manual_PipMet.pdf.
