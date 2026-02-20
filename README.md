@@ -55,9 +55,7 @@ remotes::install_github("PipMet/PipMet", force = TRUE)
 The package is constituted of two main functions with pre-set parameters
 and algorithms for GC-MS data processing. The `workData()` function
 reads, treats and process GC-MS sample data, with metabolite
-identification and quantification. The second one, `workLib()` provides
-a workflow for an internal library creation to be uploaded into NIST MS
-Search software for spectra annotation.
+identification and quantification.
 
 The package was thought to be as friendly-user as possible. Therefore, when information is needed,
 pop-ups will appear to collect input.
@@ -67,12 +65,8 @@ library(PipMet)
 result <- workData()
 ```
 
-``` r
-library(PipMet)
-workLib()
-```
 
 Set ‘pictures = TRUE’ to generate pictures throughout the code.
 
-For more information, see the package
+For more information, see the manual
 [vignette](vignettes/workData.Rmd).
